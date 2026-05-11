@@ -1,0 +1,47 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        serif: ["Cormorant Garamond", "serif"],
+        sans: ["Manrope", "sans-serif"],
+      },
+      colors: {
+        background: "#FAFAF7",
+        foreground: "#111111",
+        border: "#111111",
+        input: "#D9D6CE",
+        ring: "#188B97",
+        card: "#FAFAF7",
+        "card-foreground": "#111111",
+        popover: "#FAFAF7",
+        "popover-foreground": "#111111",
+        primary: "#111111",
+        "primary-foreground": "#FAFAF7",
+        secondary: "#EEEAE2",
+        "secondary-foreground": "#111111",
+        muted: "#EEEAE2",
+        "muted-foreground": "#6B6760",
+        accent: "#188B97",
+        "accent-foreground": "#FAFAF7",
+        destructive: "#B42318",
+        "destructive-foreground": "#FAFAF7",
+        alabaster: "#FAFAF7",
+        onyx: "#111111",
+        teal: "#188B97",
+        sidebar: {
+          DEFAULT: "#FAFAF7",
+          foreground: "#111111",
+          primary: "#111111",
+          "primary-foreground": "#FAFAF7",
+          accent: "#EEEAE2",
+          "accent-foreground": "#111111",
+          border: "#D9D6CE",
+          ring: "#188B97",
+        },
+      },
+    },
+  },
+  plugins: [],
+};
