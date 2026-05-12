@@ -69,7 +69,7 @@ function ProjectsPage() {
             </div>
           </div>
 
-          <div className="grid gap-12 md:grid-cols-12 md:items-end">
+          <div className="grid gap-10 md:grid-cols-12 md:items-end">
             <div className="md:col-span-7">
               <motion.div
                 key={`${activeProject.slug}-copy`}
@@ -81,7 +81,7 @@ function ProjectsPage() {
                   <span className="h-px w-10 bg-[color:var(--color-teal)]" />
                   <span className="eyebrow">{activeProject.category}</span>
                 </div>
-                <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[0.96] md:text-8xl">
+                <h1 className="mt-8 max-w-5xl font-serif text-[clamp(3rem,15vw,5rem)] leading-[0.98] md:text-8xl md:leading-[0.96]">
                   {activeProject.title}
                 </h1>
                 <p className="mt-8 max-w-xl text-base leading-relaxed text-background/72 md:text-lg">
@@ -92,26 +92,26 @@ function ProjectsPage() {
 
             <div className="md:col-span-4 md:col-start-9">
               <div className="border-y border-background/20 py-7 backdrop-blur-[2px]">
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid gap-6 sm:grid-cols-2">
                   <div>
                     <div className="flex items-center gap-2 text-background/45">
                       <MapPin className="h-4 w-4" />
-                      <span className="text-[10px] tracking-[0.2em] uppercase">
+                      <span className="text-[10px] tracking-[0.16em] uppercase sm:tracking-[0.2em]">
                         Location
                       </span>
                     </div>
-                    <div className="mt-3 font-serif text-2xl">
+                    <div className="mt-3 font-serif text-xl sm:text-2xl">
                       {activeProject.location}
                     </div>
                   </div>
                   <div>
                     <div className="flex items-center gap-2 text-background/45">
                       <Sparkles className="h-4 w-4" />
-                      <span className="text-[10px] tracking-[0.2em] uppercase">
+                      <span className="text-[10px] tracking-[0.16em] uppercase sm:tracking-[0.2em]">
                         Finish
                       </span>
                     </div>
-                    <div className="mt-3 font-serif text-2xl">
+                    <div className="mt-3 font-serif text-xl sm:text-2xl">
                       {activeProject.year}
                     </div>
                   </div>
@@ -120,7 +120,7 @@ function ProjectsPage() {
                 <div className="mt-8">
                   <div className="flex items-center gap-2 text-background/45">
                     <Layers className="h-4 w-4" />
-                    <span className="text-[10px] tracking-[0.2em] uppercase">
+                    <span className="text-[10px] tracking-[0.16em] uppercase sm:tracking-[0.2em]">
                       Scope
                     </span>
                   </div>
@@ -128,7 +128,7 @@ function ProjectsPage() {
                     {activeProject.scope.map((item) => (
                       <span
                         key={item}
-                        className="border border-background/20 px-3 py-2 text-[10px] tracking-[0.18em] text-background/75 uppercase"
+                        className="border border-background/20 px-3 py-2 text-[10px] tracking-[0.14em] text-background/75 uppercase sm:tracking-[0.18em]"
                       >
                         {item}
                       </span>
@@ -155,7 +155,7 @@ function ProjectsPage() {
                   <div className="text-[10px] tracking-[0.22em] text-background/45 uppercase">
                     Next
                   </div>
-                  <div className="truncate font-serif text-xl text-background/80">
+                  <div className="truncate font-serif text-lg text-background/80 sm:text-xl">
                     {nextProject.title}
                   </div>
                 </div>
@@ -248,12 +248,12 @@ function ProjectsPage() {
                               className="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
                             />
                             <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_48%,rgba(0,0,0,0.62)_100%)] opacity-90" />
-                            <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-5 text-background">
+                            <div className="absolute right-4 bottom-4 left-4 flex items-end justify-between gap-4 text-background md:right-5 md:bottom-5 md:left-5 md:gap-5">
                               <div>
-                                <div className="text-[10px] tracking-[0.24em] text-background/65 uppercase">
+                                <div className="text-[10px] tracking-[0.16em] text-background/65 uppercase sm:tracking-[0.24em]">
                                   {project.category} / {project.location}
                                 </div>
-                                <h3 className="mt-2 font-serif text-3xl">
+                                <h3 className="mt-2 font-serif text-2xl sm:text-3xl">
                                   {project.title}
                                 </h3>
                               </div>
@@ -271,7 +271,7 @@ function ProjectsPage() {
                                   Project Details
                                 </span>
                               </div>
-                              <p className="relative mt-7 font-serif text-2xl leading-[1.08] text-black md:text-3xl">
+                              <p className="relative mt-7 font-serif text-xl leading-[1.08] text-black sm:text-2xl md:text-3xl">
                                 {project.detail}
                               </p>
                             </div>
@@ -319,8 +319,8 @@ function ProjectsPage() {
                         </span>
                       </div>
                       <p className="mt-8 max-w-3xl font-serif text-4xl leading-[1.08] text-black md:text-6xl">
-                        &ldquo;Details are not decoration. They are the evidence of
-                        control.&rdquo;
+                        &ldquo;Details are not decoration. They are the evidence
+                        of control.&rdquo;
                       </p>
                       <p className="mt-8 max-w-xl text-sm leading-relaxed text-black/58">
                         Each project is resolved through proportion, finish,

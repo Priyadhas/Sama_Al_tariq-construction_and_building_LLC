@@ -5,7 +5,7 @@ export function Footer() {
         <div className="grid gap-16 md:grid-cols-12">
           <div className="md:col-span-5">
             <div className="font-serif text-3xl">Sama Al Tariq</div>
-            <div className="mt-2 text-[11px] tracking-[0.24em] text-foreground/50 uppercase">
+            <div className="mt-2 text-[11px] tracking-[0.18em] text-foreground/50 uppercase sm:tracking-[0.24em]">
               Building Contracting L.L.C.
             </div>
             <p className="mt-8 max-w-sm text-sm leading-relaxed text-foreground/60">
@@ -29,7 +29,7 @@ export function Footer() {
                   +971 54 319 0845
                 </a>
               </li>
-              <li className="pt-4 text-[11px] font-semibold tracking-[0.24em] text-foreground/50 uppercase">
+              <li className="pt-4 text-[11px] font-semibold tracking-[0.18em] text-foreground/50 uppercase sm:tracking-[0.24em]">
                 Email Address
               </li>
               <li>
@@ -48,7 +48,7 @@ export function Footer() {
                   info@samaaltariq.org
                 </a>
               </li>
-              <li className="pt-4 text-[11px] font-semibold tracking-[0.24em] text-foreground/50 uppercase">
+              <li className="pt-4 text-[11px] font-semibold tracking-[0.18em] text-foreground/50 uppercase sm:tracking-[0.24em]">
                 Office Address
               </li>
               <li>Sapphire Tower, Dubai, UAE</li>
@@ -81,7 +81,7 @@ export function Footer() {
           </div>
         </div>
         <div className="hairline mt-20" />
-        <div className="mt-8 flex flex-col items-start justify-between gap-3 text-xs tracking-[0.18em] text-foreground/50 uppercase md:flex-row md:items-center">
+        <div className="mt-8 flex flex-col items-start justify-between gap-3 text-xs tracking-[0.12em] text-foreground/50 uppercase sm:tracking-[0.18em] md:flex-row md:items-center">
           <div>
             © {new Date().getFullYear()} Sama Al Tariq Building Contracting
             L.L.C.

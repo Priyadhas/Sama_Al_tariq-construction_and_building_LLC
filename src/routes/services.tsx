@@ -93,7 +93,7 @@ function ServicesPage() {
               <span className="h-px w-10 bg-foreground/40" />
               <span className="eyebrow">Services</span>
             </div>
-            <h1 className="mt-8 max-w-5xl font-serif text-5xl leading-[1.02] md:text-7xl">
+            <h1 className="mt-8 max-w-5xl font-serif text-[clamp(3rem,13vw,4.5rem)] leading-[1.02] md:text-7xl">
               Material, method, and finish held in quiet alignment.
             </h1>
           </Reveal>
@@ -123,11 +123,11 @@ function ServicesPage() {
                 <div className="max-w-3xl">
                   <div className="flex items-center gap-3 text-[color:var(--color-teal)]">
                     <span className="h-px w-10 bg-[color:var(--color-teal)]" />
-                    <span className="text-[11px] font-bold tracking-[0.32em] uppercase">
+                    <span className="text-[11px] font-bold tracking-[0.24em] uppercase sm:tracking-[0.32em]">
                       Standard
                     </span>
                   </div>
-                  <p className="mt-8 font-serif text-4xl leading-[1.08] text-black md:text-5xl">
+                  <p className="mt-8 font-serif text-3xl leading-[1.08] text-black md:text-5xl">
                     &ldquo;Every surface should look resolved before anyone asks
                     who made it.&rdquo;
                   </p>

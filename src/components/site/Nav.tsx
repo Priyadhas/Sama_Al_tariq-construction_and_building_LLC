@@ -1,9 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import logo from "../../assets/logo.jpg";
+import { useEffect, useRef, useState } from "react";
+import { Menu, X } from "lucide-react";
+import logo from "../../assets/logo-transparent.png";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const previousOverflow = useRef("");
   const navItems = [
     ["Home", "/"],
     ["About", "/about"],
@@ -19,28 +22,39 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!menuOpen) {
+      return;
+    }
+
+    previousOverflow.current = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow.current;
+    };
+  }, [menuOpen]);
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-500 ${
-        scrolled
+        scrolled || menuOpen
           ? "border-b border-foreground/10 bg-background/95 shadow-[0_18px_50px_rgba(0,0,0,0.08)] backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <div className="container-x grid h-28 grid-cols-[auto_1fr_auto] items-center gap-6 xl:gap-8">
+      <div className="container-x grid h-24 grid-cols-[auto_1fr_auto] items-center gap-4 md:h-28 md:gap-6 xl:gap-8">
         <Link to="/" className="group flex items-center">
           <span
             className={`flex items-center justify-center transition-all duration-500 ${
-              scrolled
-                ? "bg-transparent p-0"
-                : "bg-background p-3 shadow-[0_18px_50px_rgba(0,0,0,0.22)]"
+              scrolled || menuOpen ? "p-0" : "p-0 drop-shadow-[0_14px_34px_rgba(0,0,0,0.28)]"
             }`}
           >
             <img
               src={logo}
               alt="Sama Al Tariq"
               className={`w-auto transition-all duration-500 ${
-                scrolled ? "h-14 md:h-16" : "h-16 md:h-20"
+                scrolled || menuOpen ? "h-12 md:h-16" : "h-14 md:h-20"
               }`}
             />
           </span>
@@ -83,6 +97,55 @@ export function Nav() {
             Enquire
           </a>
         </div>
+        <button
+          type="button"
+          onClick={() => setMenuOpen((open) => !open)}
+          className={`col-start-3 inline-flex h-11 w-11 items-center justify-center justify-self-end border transition-colors duration-300 lg:hidden ${
+            scrolled || menuOpen
+              ? "border-foreground/20 text-foreground"
+              : "border-background/60 bg-black/10 text-background shadow-[0_16px_40px_rgba(0,0,0,0.16)] backdrop-blur-[2px]"
+          }`}
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
+          aria-expanded={menuOpen}
+        >
+          {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </div>
+      <div
+        className={`lg:hidden ${
+          menuOpen ? "block" : "hidden"
+        } border-t border-foreground/10 bg-background/98`}
+      >
+        <nav className="container-x flex max-h-[calc(100svh-6rem)] flex-col overflow-y-auto py-6">
+          {navItems.map(([label, href]) => (
+            <a
+              key={label}
+              href={href}
+              onClick={() => setMenuOpen(false)}
+              className="border-b border-foreground/10 py-5 text-[12px] font-extrabold tracking-[0.24em] text-foreground/80 uppercase transition-colors hover:text-[color:var(--color-teal)]"
+            >
+              {label}
+            </a>
+          ))}
+          <div className="mt-6 grid grid-cols-2 gap-3">
+            <a
+              href="/login"
+              onClick={() => setMenuOpen(false)}
+              className="border border-foreground/20 px-4 py-4 text-center text-[11px] font-extrabold tracking-[0.22em] text-foreground/80 uppercase"
+            >
+              Login
+            </a>
+            <a
+              href="/contact"
+              onClick={() => setMenuOpen(false)}
+              className="bg-foreground px-4 py-4 text-center text-[11px] font-extrabold tracking-[0.22em] text-background uppercase"
+            >
+              Enquire
+            </a>
+          </div>
+        </nav>
       </div>
     </header>
   );

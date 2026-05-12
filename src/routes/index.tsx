@@ -112,8 +112,8 @@ function Hero() {
         className="container-x relative z-10 flex h-full flex-col justify-between pt-32 pb-16"
       >
         <div className="flex items-center gap-4 text-background/70">
-          <span className="h-px w-12 bg-background/50" />
-          <span className="text-[11px] tracking-[0.32em] uppercase">
+          <span className="h-px w-8 bg-background/50 sm:w-12" />
+          <span className="text-[10px] tracking-[0.24em] uppercase sm:text-[11px] sm:tracking-[0.32em]">
             Est. Dubai / MMXII
           </span>
         </div>
@@ -136,8 +136,8 @@ function Hero() {
             className="mt-10 max-w-md text-base leading-relaxed text-background/70"
           >
             A Dubai fit-out and renovation house. Boardrooms, lobbies, executive
-            suites and private residences delivered for clients who judge
-            the work on what cannot be seen.
+            suites and private residences delivered for clients who judge the
+            work on what cannot be seen.
           </motion.p>
         </div>
 
@@ -149,7 +149,7 @@ function Hero() {
         >
           <a
             href="#work"
-            className="group inline-flex items-center gap-4 border border-background/40 px-7 py-4 text-[11px] tracking-[0.28em] text-background uppercase transition-colors hover:border-[color:var(--color-teal)] hover:bg-[color:var(--color-teal)] hover:text-background"
+            className="group inline-flex max-w-full items-center gap-4 border border-background/40 px-5 py-4 text-[10px] tracking-[0.2em] text-background uppercase transition-colors hover:border-[color:var(--color-teal)] hover:bg-[color:var(--color-teal)] hover:text-background sm:px-7 sm:text-[11px] sm:tracking-[0.28em]"
           >
             View selected work
             <span className="inline-block transition-transform group-hover:translate-x-1">
@@ -431,11 +431,11 @@ function Services() {
               <span className="h-px w-10 bg-foreground/40" />
               <span className="eyebrow">Practice</span>
             </div>
-            <h2 className="mt-8 w-[min(82vw,66rem)] font-serif text-[clamp(2.65rem,4.3vw,5.2rem)] font-medium leading-[1.03] tracking-[0.015em] text-foreground">
-              <span className="block whitespace-nowrap">
+            <h2 className="mt-8 max-w-[66rem] font-serif text-[clamp(2.45rem,10vw,4.25rem)] font-medium leading-[1.03] tracking-[0.015em] text-foreground md:w-[min(82vw,66rem)] md:text-[clamp(2.65rem,4.3vw,5.2rem)]">
+              <span className="block md:whitespace-nowrap">
                 Material, method, and finish
               </span>
-              <span className="block whitespace-nowrap">
+              <span className="block md:whitespace-nowrap">
                 held in quiet alignment.
               </span>
             </h2>
@@ -443,7 +443,7 @@ function Services() {
         </div>
 
         <div className="mt-16 overflow-hidden border border-foreground/10 bg-foreground shadow-[0_30px_90px_rgba(0,0,0,0.12)] md:mt-20">
-          <div className="service-cinema-frame relative aspect-[4/5] min-h-[620px] overflow-hidden md:aspect-[16/8]">
+          <div className="service-cinema-frame relative min-h-[720px] overflow-hidden md:aspect-[16/8] md:min-h-[620px]">
             <AnimatePresence mode="wait">
               <motion.img
                 key={service.title}
@@ -462,10 +462,10 @@ function Services() {
             <div className="service-cinema-grid absolute inset-0 opacity-35" />
             <div className="service-cinema-scan absolute inset-y-0 left-0 w-[28%]" />
 
-            <div className="relative z-10 grid h-full grid-rows-[auto_1fr_auto] gap-8 p-7 text-background md:grid-cols-[minmax(0,1fr)_22rem] md:grid-rows-[auto_1fr_auto] md:gap-x-12 md:p-12 lg:grid-cols-[minmax(0,1fr)_26rem] lg:p-16">
-              <div className="flex items-center gap-3 text-background/70 md:col-start-1">
-                <span className="h-px w-10 bg-[color:var(--color-teal)]" />
-                <span className="text-[10px] font-bold tracking-[0.3em] uppercase">
+            <div className="relative z-10 grid h-full min-w-0 grid-rows-[auto_auto_1fr_auto] gap-7 p-5 text-background sm:p-7 md:grid-cols-[minmax(0,1fr)_22rem] md:grid-rows-[auto_1fr_auto] md:gap-8 md:gap-x-12 md:p-12 lg:grid-cols-[minmax(0,1fr)_26rem] lg:p-16">
+              <div className="flex min-w-0 items-center gap-3 text-background/70 md:col-start-1">
+                <span className="h-px w-8 shrink-0 bg-[color:var(--color-teal)] sm:w-10" />
+                <span className="min-w-0 text-[10px] font-bold tracking-[0.24em] uppercase sm:tracking-[0.3em]">
                   Service Matrix
                 </span>
               </div>
@@ -477,7 +477,7 @@ function Services() {
                 </span>
               </div>
 
-              <div className="max-w-3xl self-center md:col-start-1 md:row-start-2 md:pr-8">
+              <div className="min-w-0 max-w-3xl self-end md:col-start-1 md:row-start-2 md:self-center md:pr-8">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={service.title}
@@ -486,25 +486,25 @@ function Services() {
                     exit={{ opacity: 0, y: -18 }}
                     transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    <h3 className="font-serif text-4xl leading-[0.96] md:text-7xl">
+                    <h3 className="max-w-full break-words font-serif text-[clamp(2.35rem,11vw,3.35rem)] leading-[0.98] md:text-7xl md:leading-[0.96]">
                       {service.title}
                     </h3>
-                    <p className="mt-8 max-w-xl text-sm leading-relaxed text-background/72 md:text-base">
+                    <p className="mt-6 max-w-xl text-sm leading-relaxed text-background/72 md:mt-8 md:text-base">
                       {service.body}
                     </p>
                   </motion.div>
                 </AnimatePresence>
               </div>
 
-              <div className="md:absolute md:top-1/2 md:right-10 md:z-20 md:w-[22rem] md:-translate-y-1/2 lg:right-16 lg:w-[25rem]">
-                <div className="w-full border-y border-background/15 bg-black/10 py-3 backdrop-blur-[2px] md:border-y-0 md:border-r md:bg-black/0 md:py-0 md:pr-8 md:backdrop-blur-0">
+              <div className="min-w-0 md:absolute md:top-1/2 md:right-10 md:z-20 md:w-[22rem] md:-translate-y-1/2 lg:right-16 lg:w-[25rem]">
+                <div className="w-full min-w-0 border-y border-background/15 bg-black/10 py-3 backdrop-blur-[2px] md:border-y-0 md:border-r md:bg-black/0 md:py-0 md:pr-8 md:backdrop-blur-0">
                   <div className="mb-5 hidden items-center justify-end gap-3 text-background/45 md:flex">
                     <span className="text-[9px] font-bold tracking-[0.34em] uppercase">
                       Disciplines
                     </span>
                     <span className="h-px w-8 bg-background/30" />
                   </div>
-                  <div className="flex gap-3 overflow-x-auto pb-1 md:block md:space-y-1 md:overflow-visible md:pb-0">
+                  <div className="flex max-w-full gap-3 overflow-x-auto pb-2 [scrollbar-width:thin] md:block md:space-y-1 md:overflow-visible md:pb-0">
                     {services.map((item, index) => {
                       const isActive = index === activeService;
 
@@ -513,13 +513,13 @@ function Services() {
                           key={item.title}
                           type="button"
                           onClick={() => setActiveService(index)}
-                          className={`group relative flex shrink-0 items-center gap-3 py-2 pr-5 text-left transition-all duration-500 md:w-full md:justify-end md:py-2.5 md:pr-0 md:text-right ${
+                          className={`group relative flex max-w-[78vw] shrink-0 items-center gap-3 py-2 pr-5 text-left transition-all duration-500 md:w-full md:max-w-none md:justify-end md:py-2.5 md:pr-0 md:text-right ${
                             isActive
                               ? "text-background"
                               : "text-background/42 hover:text-background/78"
                           }`}
                         >
-                          <span className="max-w-[15rem] text-[10px] font-bold tracking-[0.22em] uppercase leading-relaxed md:max-w-none">
+                          <span className="min-w-0 truncate text-[10px] font-bold tracking-[0.18em] uppercase leading-relaxed sm:tracking-[0.22em] md:max-w-none md:whitespace-normal md:text-clip">
                             {item.title}
                           </span>
                           <span
@@ -547,7 +547,7 @@ function Services() {
                       transition={{ duration: 5.2, ease: "linear" }}
                     />
                   </div>
-                  <div className="mt-4 flex items-center justify-between gap-8 text-[10px] tracking-[0.28em] text-background/50 uppercase">
+                  <div className="mt-4 flex items-center justify-between gap-4 text-[10px] tracking-[0.18em] text-background/50 uppercase sm:gap-8 sm:tracking-[0.28em]">
                     <span>Active Scope</span>
                     <span className="truncate">Next: {nextService.title}</span>
                   </div>
@@ -561,7 +561,7 @@ function Services() {
                         (activeService - 1 + services.length) % services.length,
                       )
                     }
-                    className="border border-background/30 px-4 py-3 text-[10px] tracking-[0.24em] text-background/80 uppercase transition-colors hover:border-[color:var(--color-teal)] hover:text-background"
+                    className="flex-1 border border-background/30 px-4 py-3 text-[10px] tracking-[0.24em] text-background/80 uppercase transition-colors hover:border-[color:var(--color-teal)] hover:text-background md:flex-none"
                   >
                     Prev
                   </button>
@@ -570,7 +570,7 @@ function Services() {
                     onClick={() =>
                       setActiveService((activeService + 1) % services.length)
                     }
-                    className="border border-background/30 px-4 py-3 text-[10px] tracking-[0.24em] text-background/80 uppercase transition-colors hover:border-[color:var(--color-teal)] hover:text-background"
+                    className="flex-1 border border-background/30 px-4 py-3 text-[10px] tracking-[0.24em] text-background/80 uppercase transition-colors hover:border-[color:var(--color-teal)] hover:text-background md:flex-none"
                   >
                     Next
                   </button>
@@ -602,9 +602,75 @@ function Work() {
     <section
       ref={ref}
       id="work"
-      className="relative h-[245vh] border-t border-foreground/10 bg-[#e8e6e3]"
+      className="relative border-t border-foreground/10 bg-[#e8e6e3] md:h-[245vh]"
     >
-      <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden py-10 md:py-14">
+      <div className="container-x py-20 md:hidden">
+        <div className="max-w-xl">
+          <div className="flex items-center gap-3 text-foreground/60">
+            <span className="h-px w-10 bg-foreground/40" />
+            <span className="eyebrow">Selected Work</span>
+          </div>
+          <h2 className="mt-5 font-serif text-[clamp(2.75rem,12vw,4.25rem)] leading-[1.02]">
+            Signature spaces, crafted with precision.
+          </h2>
+          <p className="mt-5 max-w-md text-sm leading-relaxed text-foreground/62">
+            Explore a curated selection of villa, office, retail, and commercial
+            interiors shaped with refined materials, disciplined detailing, and
+            a luxury finish.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-8">
+          {projects.slice(0, 4).map((p, i) => (
+            <Link
+              key={p.t}
+              to="/projects"
+              className="group block overflow-hidden bg-foreground"
+            >
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <img
+                  src={p.img}
+                  alt={p.t}
+                  loading={i === 0 ? "eager" : "lazy"}
+                  className="h-full w-full object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.02)_18%,rgba(0,0,0,0.74)_100%)]" />
+                <div className="absolute inset-x-5 bottom-5 text-background">
+                  <div className="mb-4 flex items-center justify-between gap-5 text-[10px] font-bold tracking-[0.18em] text-background/75 uppercase">
+                    <span>{String(i + 1).padStart(2, "0")}</span>
+                    <span className="truncate">{p.c}</span>
+                  </div>
+                  <h3 className="max-w-[12ch] font-sans text-[clamp(2.45rem,13vw,4rem)] font-black uppercase leading-[0.92] tracking-normal">
+                    {p.t}
+                  </h3>
+                  <div className="mt-5 text-[10px] font-bold tracking-[0.2em] text-background/75 uppercase">
+                    {p.l}
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+
+          <Link
+            to="/projects"
+            className="group flex min-h-64 items-center justify-center bg-[color:var(--color-teal)] px-8 py-14 text-center text-background"
+          >
+            <div>
+              <div className="mx-auto mb-7 h-px w-20 bg-background/50 transition-transform duration-500 group-hover:scale-x-125" />
+              <div className="font-serif text-5xl leading-[0.95]">
+                Explore
+                <br />
+                More
+              </div>
+              <div className="mt-7 text-[10px] font-bold tracking-[0.2em] uppercase text-background/75">
+                View full project page
+              </div>
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      <div className="sticky top-0 hidden h-screen flex-col justify-center overflow-hidden py-10 md:flex md:py-14">
         <div className="container-x relative z-10 mb-7 flex flex-col items-start justify-between gap-5 md:mb-6 md:flex-row md:items-end">
           <div className="max-w-xl">
             <div className="flex items-center gap-3 text-foreground/60">
@@ -620,7 +686,7 @@ function Work() {
               detailing, and a luxury finish.
             </p>
           </div>
-          <div className="text-[10px] tracking-[0.28em] text-foreground/45 uppercase">
+          <div className="text-[10px] tracking-[0.2em] text-foreground/45 uppercase md:tracking-[0.28em]">
             Scroll to explore
           </div>
         </div>
@@ -640,11 +706,11 @@ function Work() {
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.02)_20%,rgba(0,0,0,0.68)_100%)]" />
               <div className="absolute left-5 right-5 bottom-5 text-background md:left-7 md:right-7 md:bottom-7">
-                <div className="mb-4 flex items-center justify-between gap-5 text-[10px] font-bold tracking-[0.22em] text-background/75 uppercase">
+                <div className="mb-4 flex items-center justify-between gap-5 text-[10px] font-bold tracking-[0.18em] text-background/75 uppercase md:tracking-[0.22em]">
                   <span>{String(i + 1).padStart(2, "0")}</span>
                   <span className="truncate">{p.c}</span>
                 </div>
-                <h3 className="max-w-[12ch] font-sans text-[clamp(2.6rem,8vw,5.4rem)] font-black uppercase leading-[0.92] tracking-normal md:text-[4.35rem]">
+                <h3 className="max-w-[12ch] font-sans text-[clamp(2.3rem,13vw,4.35rem)] font-black uppercase leading-[0.92] tracking-normal md:text-[4.35rem]">
                   {p.t}
                 </h3>
                 <div className="mt-5 text-[10px] font-bold tracking-[0.24em] text-background/75 uppercase">
@@ -666,7 +732,7 @@ function Work() {
                 <br />
                 More
               </div>
-              <div className="mt-8 text-[10px] font-bold tracking-[0.28em] uppercase text-background/75">
+              <div className="mt-8 text-[10px] font-bold tracking-[0.2em] uppercase text-background/75 md:tracking-[0.28em]">
                 View full project page
               </div>
             </div>
@@ -743,7 +809,7 @@ function Process() {
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.02)_35%,rgba(0,0,0,0.72)_100%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_22%,rgba(255,255,255,0.18),transparent_28%)] mix-blend-screen" />
-                <div className="absolute right-6 bottom-6 left-6 flex items-end justify-between border-t border-white/20 pt-5 text-[10px] font-bold tracking-[0.28em] text-background/70 uppercase">
+                <div className="absolute right-6 bottom-6 left-6 flex items-end justify-between border-t border-white/20 pt-5 text-[10px] font-bold tracking-[0.18em] text-background/70 uppercase md:tracking-[0.28em]">
                   <span>Precision Path</span>
                   <span>01-04</span>
                 </div>
