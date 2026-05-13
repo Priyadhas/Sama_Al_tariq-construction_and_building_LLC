@@ -6,11 +6,11 @@ export function ContactCTA() {
       <div className="container-x text-center">
         <Reveal>
           <div className="mx-auto flex items-center justify-center gap-3 text-background/42 sm:gap-4">
-            <span className="h-px w-8 bg-background/28 sm:w-12" />
+            <span className="h-px w-5 bg-background/28 sm:w-6" />
             <span className="text-[10px] font-bold tracking-[0.24em] uppercase sm:tracking-[0.32em]">
               Enquiries
             </span>
-            <span className="h-px w-8 bg-background/28 sm:w-12" />
+            <span className="h-px w-5 bg-background/28 sm:w-6" />
           </div>
         </Reveal>
 

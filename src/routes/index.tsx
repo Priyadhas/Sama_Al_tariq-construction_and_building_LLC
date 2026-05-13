@@ -146,7 +146,7 @@ function Hero() {
         className="container-x relative z-10 flex h-full flex-col justify-between pt-32 pb-16"
       >
         <div className="flex items-center gap-4 text-background/70">
-          <span className="h-px w-8 bg-background/50 sm:w-12" />
+          <span className="h-px w-5 bg-background/50 sm:w-6" />
           <span className="text-[10px] tracking-[0.24em] uppercase sm:text-[11px] sm:tracking-[0.32em]">
             Founded Dubai / 2012
           </span>
@@ -179,17 +179,8 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end"
+          className="flex justify-end"
         >
-          <a
-            href="#work"
-            className="group inline-flex max-w-full items-center gap-4 border border-background/40 px-5 py-4 text-[10px] tracking-[0.2em] text-background uppercase transition-colors hover:border-[color:var(--color-teal)] hover:bg-[color:var(--color-teal)] hover:text-background sm:px-7 sm:text-[11px] sm:tracking-[0.28em]"
-          >
-            View selected work
-            <span className="inline-block transition-transform group-hover:translate-x-1">
-              →
-            </span>
-          </a>
           <div className="flex items-center gap-3 text-background/60">
             <span className="text-[10px] tracking-[0.32em] uppercase">
               Scroll
@@ -341,7 +332,7 @@ function Philosophy() {
         <div className="md:col-span-6 md:col-start-7 md:pt-16">
           <Reveal>
             <div className="flex items-center gap-3 text-foreground/60">
-              <span className="h-px w-10 bg-foreground/40" />
+              <span className="h-px w-5 bg-foreground/40" />
               <span className="eyebrow">Philosophy</span>
             </div>
           </Reveal>
@@ -462,7 +453,7 @@ function Services() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3 text-foreground/60">
-              <span className="h-px w-10 bg-foreground/40" />
+              <span className="h-px w-5 bg-foreground/40" />
               <span className="eyebrow">Practice</span>
             </div>
             <h2 className="mt-8 max-w-[66rem] font-serif text-[clamp(2.45rem,10vw,4.25rem)] font-medium leading-[1.03] tracking-[0.015em] text-foreground md:w-[min(82vw,66rem)] md:text-[clamp(2.65rem,4.3vw,5.2rem)]">
@@ -498,7 +489,7 @@ function Services() {
 
             <div className="relative z-10 grid h-full min-w-0 grid-rows-[auto_auto_1fr_auto] gap-7 p-5 text-background sm:p-7 md:grid-cols-[minmax(0,1fr)_22rem] md:grid-rows-[auto_1fr_auto] md:gap-8 md:gap-x-12 md:p-12 lg:grid-cols-[minmax(0,1fr)_26rem] lg:p-16">
               <div className="flex min-w-0 items-center gap-3 text-background/70 md:col-start-1">
-                <span className="h-px w-8 shrink-0 bg-[color:var(--color-teal)] sm:w-10" />
+                <span className="h-px w-5 shrink-0 bg-[color:var(--color-teal)] sm:w-6" />
                 <span className="min-w-0 text-[10px] font-bold tracking-[0.24em] uppercase sm:tracking-[0.3em]">
                   Service Matrix
                 </span>
@@ -536,7 +527,7 @@ function Services() {
                     <span className="text-[9px] font-bold tracking-[0.34em] uppercase">
                       Disciplines
                     </span>
-                    <span className="h-px w-8 bg-background/30" />
+                    <span className="h-px w-5 bg-background/30" />
                   </div>
                   <div className="flex max-w-full gap-3 overflow-x-auto pb-2 [scrollbar-width:thin] md:block md:space-y-1 md:overflow-visible md:pb-0">
                     {services.map((item, index) => {
@@ -641,7 +632,7 @@ function Work() {
       <div className="container-x py-20 md:hidden">
         <div className="max-w-xl">
           <div className="flex items-center gap-3 text-foreground/60">
-            <span className="h-px w-10 bg-foreground/40" />
+            <span className="h-px w-5 bg-foreground/40" />
             <span className="eyebrow">Selected Work</span>
           </div>
           <h2 className="mt-5 font-serif text-[clamp(2.75rem,12vw,4.25rem)] leading-[1.02]">
@@ -708,7 +699,7 @@ function Work() {
         <div className="container-x relative z-10 mb-7 flex flex-col items-start justify-between gap-5 md:mb-6 md:flex-row md:items-end">
           <div className="max-w-xl">
             <div className="flex items-center gap-3 text-foreground/60">
-              <span className="h-px w-10 bg-foreground/40" />
+              <span className="h-px w-5 bg-foreground/40" />
               <span className="eyebrow">Selected Work</span>
             </div>
             <h2 className="mt-4 font-serif text-4xl leading-[1.05] md:text-6xl">
@@ -814,7 +805,7 @@ function Process() {
           <div className="lg:col-span-5">
             <Reveal>
               <div className="flex items-center gap-3 text-background/70">
-                <span className="h-px w-10 bg-[color:var(--color-teal)]" />
+                <span className="h-px w-5 bg-[color:var(--color-teal)]" />
                 <span className="eyebrow">Approach</span>
               </div>
             </Reveal>

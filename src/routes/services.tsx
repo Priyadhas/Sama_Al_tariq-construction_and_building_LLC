@@ -90,7 +90,7 @@ function ServicesPage() {
         <div className="container-x">
           <Reveal>
             <div className="flex items-center gap-3 text-foreground/60">
-              <span className="h-px w-10 bg-foreground/40" />
+              <span className="h-px w-5 bg-foreground/40" />
               <span className="eyebrow">Services</span>
             </div>
             <h1 className="mt-8 max-w-5xl font-serif text-[clamp(3rem,13vw,4.5rem)] leading-[1.02] md:text-7xl">
@@ -125,7 +125,7 @@ function ServicesPage() {
               <aside className="relative px-2 py-10 text-foreground md:px-10 lg:pt-20">
                 <div className="max-w-3xl">
                   <div className="flex items-center gap-3 text-[color:var(--color-teal)]">
-                    <span className="h-px w-10 bg-[color:var(--color-teal)]" />
+                    <span className="h-px w-5 bg-[color:var(--color-teal)]" />
                     <span className="text-[11px] font-bold tracking-[0.24em] uppercase sm:tracking-[0.32em]">
                       Standard
                     </span>

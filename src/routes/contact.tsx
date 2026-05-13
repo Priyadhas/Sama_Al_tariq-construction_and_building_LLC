@@ -42,7 +42,7 @@ function ContactPage() {
         <div className="container-x grid gap-14 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3 text-foreground/60">
-              <span className="h-px w-10 bg-foreground/40" />
+              <span className="h-px w-5 bg-foreground/40" />
               <span className="eyebrow">Contact</span>
             </div>
             <h1 className="mt-8 max-w-4xl font-serif text-[clamp(3rem,12vw,5.5rem)] leading-[1.02]">

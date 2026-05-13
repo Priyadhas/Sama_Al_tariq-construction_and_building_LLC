@@ -64,7 +64,7 @@ function ProjectsPage() {
             </Link>
             <div className="hidden items-center gap-3 text-[10px] font-bold tracking-[0.28em] text-background/55 uppercase md:flex">
               <span>Project archive</span>
-              <span className="h-px w-12 bg-background/30" />
+              <span className="h-px w-6 bg-background/30" />
               <span>Concept visualisations</span>
             </div>
           </div>
@@ -78,7 +78,7 @@ function ProjectsPage() {
                 transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
               >
                 <div className="flex items-center gap-3 text-background/70">
-                  <span className="h-px w-10 bg-[color:var(--color-teal)]" />
+                  <span className="h-px w-5 bg-[color:var(--color-teal)]" />
                   <span className="eyebrow">{activeProject.category}</span>
                 </div>
                 <h1 className="mt-8 max-w-5xl font-serif text-[clamp(3rem,15vw,5rem)] leading-[0.98] md:text-8xl md:leading-[0.96]">
@@ -215,7 +215,7 @@ function ProjectsPage() {
         <div className="container-x">
           <Reveal>
             <div className="flex items-center gap-3 text-foreground/60">
-              <span className="h-px w-10 bg-foreground/40" />
+              <span className="h-px w-5 bg-foreground/40" />
               <span className="eyebrow">Detailed View</span>
             </div>
             <h2 className="mt-8 max-w-4xl font-serif text-4xl leading-[1.05] md:text-6xl">
@@ -272,7 +272,7 @@ function ProjectsPage() {
                             <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-[#158e98]/55" />
                             <div>
                               <div className="relative flex items-center gap-3 text-[color:var(--color-teal)]">
-                                <span className="h-px w-10 bg-[color:var(--color-teal)]" />
+                                <span className="h-px w-5 bg-[color:var(--color-teal)]" />
                                 <span className="text-[10px] font-bold tracking-[0.28em] uppercase">
                                   Project Details
                                 </span>
@@ -319,7 +319,7 @@ function ProjectsPage() {
                   <Reveal delay={0.1} className="md:col-span-6">
                     <aside className="relative px-2 py-10 text-foreground md:px-12 md:pt-20">
                       <div className="flex items-center gap-3 text-[color:var(--color-teal)]">
-                        <span className="h-px w-10 bg-[color:var(--color-teal)]" />
+                        <span className="h-px w-5 bg-[color:var(--color-teal)]" />
                         <span className="text-[11px] font-bold tracking-[0.32em] uppercase">
                           Project Standard
                         </span>

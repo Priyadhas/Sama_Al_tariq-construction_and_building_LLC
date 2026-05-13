@@ -85,7 +85,7 @@ function AboutPage() {
         <div className="container-x relative z-10">
           <Reveal>
             <div className="flex items-center gap-4 text-[color:var(--color-teal)]">
-              <span className="h-px w-12 bg-[color:var(--color-teal)]" />
+              <span className="h-px w-6 bg-[color:var(--color-teal)]" />
               <span className="text-[11px] font-bold tracking-[0.24em] uppercase sm:tracking-[0.36em]">
                 About
               </span>
@@ -149,7 +149,7 @@ function AboutPage() {
 
             <Reveal delay={0.08}>
               <div className="mt-12 flex items-center gap-3 text-[color:var(--color-teal)]">
-                <span className="h-px w-10 bg-[color:var(--color-teal)]" />
+                <span className="h-px w-5 bg-[color:var(--color-teal)]" />
                 <span className="text-[11px] font-bold tracking-[0.24em] uppercase sm:tracking-[0.32em]">
                   Mission
                 </span>
@@ -176,7 +176,7 @@ function AboutPage() {
         <div className="container-x">
           <Reveal>
             <div className="flex items-center gap-3 text-foreground/60">
-              <span className="h-px w-10 bg-foreground/40" />
+              <span className="h-px w-5 bg-foreground/40" />
               <span className="eyebrow">What We Do</span>
             </div>
             <h2 className="mt-8 max-w-5xl font-sans text-[clamp(3rem,15vw,8rem)] font-black uppercase leading-[0.92] tracking-normal md:leading-[0.9]">
