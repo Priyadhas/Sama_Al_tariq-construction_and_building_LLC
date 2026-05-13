@@ -1,6 +1,6 @@
 import alSaharaGroupOfficeImg from "../assets/projects/project-al-sahara-group-office-4k.jpg";
 import aVilla259DubaiHillsImg from "../assets/projects/project-a-villa-259-dubai-hills-4k.jpg";
-import bizHiveBusinessCenterImg from "../assets/projects/project-biz-hive-bussiness-center-4k.jpg";
+import bizHiveBusinessCenterImg from "../assets/projects/project-biz-hive-business-center-4k.jpg";
 import cancanOfficeRenovationImg from "../assets/projects/project-cancan-office-renovation-4k.jpg";
 import dubaiCommercityImg from "../assets/projects/project-dubai-commercity-4k.jpg";
 import gateAvenueMallImg from "../assets/projects/project-gate-avenue-1-mall-4k.jpg";
@@ -17,13 +17,14 @@ export const projectArchive = [
     category: "Private Villa",
     location: "Dubai Hills",
     year: "2026",
+    status: "Concept Visualisation",
     image: aVilla259DubaiHillsImg,
     palette: "Ivory marble, teal glass, brass, walnut",
     scope: ["Villa interiors", "Stair feature", "Lighting design"],
     summary:
       "A refined villa interior with sculptural stone, teal glass, warm brass, and bespoke timber detailing.",
     detail:
-      "A Villa 259 Dubai Hills is presented as a premium residential interior with a grand arrival space, polished marble, soft concealed lighting, and custom details that create a calm luxury atmosphere.",
+      "Concept visualisation for a premium residential interior with a grand arrival space, polished marble, soft concealed lighting, and custom details that create a calm luxury atmosphere.",
   },
   {
     slug: "al-sahara-group-office",
@@ -31,6 +32,7 @@ export const projectArchive = [
     category: "Corporate Office",
     location: "Dubai",
     year: "2026",
+    status: "Concept Visualisation",
     image: alSaharaGroupOfficeImg,
     palette: "Warm stone, walnut, brass, deep teal",
     scope: ["Reception design", "Executive lounge", "Office fit-out"],
@@ -40,18 +42,19 @@ export const projectArchive = [
       "Al Sahara Group Office combines a polished reception, comfortable executive areas, ribbed timber surfaces, glass partitions, and brass accents to create a professional interior with a premium Dubai character.",
   },
   {
-    slug: "biz-hive-bussiness-center",
-    title: "Biz Hive Bussiness Center",
+    slug: "biz-hive-business-center",
+    title: "Biz Hive Business Center",
     category: "Business Center",
     location: "Dubai",
     year: "2026",
+    status: "Concept Visualisation",
     image: bizHiveBusinessCenterImg,
     palette: "Ivory, walnut, brass, teal, graphite",
     scope: ["Work lounge", "Meeting pods", "Flexible offices"],
     summary:
       "A luxury business center with glass meeting pods, refined work lounges, and a honeycomb-inspired ceiling detail.",
     detail:
-      "Biz Hive Bussiness Center is designed around flexibility and polish, pairing open work zones with private rooms, elegant reception details, teal seating, marble flooring, and warm architectural lighting.",
+      "Biz Hive Business Center is designed around flexibility and polish, pairing open work zones with private rooms, elegant reception details, teal seating, marble flooring, and warm architectural lighting.",
   },
   {
     slug: "cancan-office-renovation",
@@ -59,6 +62,7 @@ export const projectArchive = [
     category: "Office Renovation",
     location: "Dubai",
     year: "2026",
+    status: "Concept Visualisation",
     image: cancanOfficeRenovationImg,
     palette: "Sage green, ivory, walnut, black metal",
     scope: ["Workspace refresh", "Feature walls", "Ceiling upgrades"],
@@ -73,6 +77,7 @@ export const projectArchive = [
     category: "Commercial Interior",
     location: "Dubai Commercity",
     year: "2026",
+    status: "Concept Visualisation",
     image: dubaiCommercityImg,
     palette: "White, graphite, teal, brushed metal",
     scope: ["Commercial fit-out", "Technology zones", "Reception design"],
@@ -83,17 +88,18 @@ export const projectArchive = [
   },
   {
     slug: "gate-avenue-1-mall",
-    title: "Gate Avenue 1 Mall",
+    title: "Gate Avenue at DIFC",
     category: "Retail Interior",
     location: "DIFC",
     year: "2026",
+    status: "Concept Visualisation",
     image: gateAvenueMallImg,
     palette: "Ivory stone, brass, warm timber, teal",
     scope: ["Mall corridor", "Retail frontage", "Wall cladding"],
     summary:
       "A premium mall interior with refined retail frontage, sculptural ceilings, stone flooring, and warm brass trims.",
     detail:
-      "Gate Avenue 1 Mall is visualized as an upscale retail environment where polished stone, glass storefronts, warm architectural lighting, and detailed cladding create a high-end visitor experience.",
+      "Concept visualisation for an upscale retail environment where polished stone, glass storefronts, warm architectural lighting, and detailed cladding create a high-end visitor experience.",
   },
   {
     slug: "seris-perfume-shop",
@@ -101,6 +107,7 @@ export const projectArchive = [
     category: "Boutique Retail",
     location: "Dubai",
     year: "2026",
+    status: "Concept Visualisation",
     image: serisPerfumeShopImg,
     palette: "Deep teal, ivory marble, black lacquer, brass",
     scope: ["Display shelving", "Retail counter", "Lighting focus"],
@@ -115,6 +122,7 @@ export const projectArchive = [
     category: "Private Villa",
     location: "Dubai Hills",
     year: "2026",
+    status: "Concept Visualisation",
     image: villa59DubaiHillsImg,
     palette: "Ivory, walnut, brass, teal, warm grey",
     scope: ["Living room", "Dining area", "Custom joinery"],
@@ -124,46 +132,49 @@ export const projectArchive = [
       "Villa 59 Dubai Hills presents a comfortable family interior with a polished living and dining arrangement, full-height windows, soft furniture, brass pendant lighting, and tailored storage details.",
   },
   {
-    slug: "villa-r69-emirates-hill",
-    title: "Villa R69 Emirates Hill",
+    slug: "villa-r69-emirates-hills",
+    title: "Villa R69 Emirates Hills",
     category: "Private Villa",
-    location: "Emirates Hill",
+    location: "Emirates Hills",
     year: "2026",
+    status: "Concept Visualisation",
     image: villaR69EmiratesHillImg,
     palette: "Bookmatched marble, walnut, brass, teal velvet",
     scope: ["Formal lounge", "Feature wall", "Chandelier lighting"],
     summary:
-      "A grand Emirates Hill villa lounge with double-height volume, marble feature wall, and sculptural lighting.",
+      "A grand Emirates Hills villa lounge with double-height volume, marble feature wall, and sculptural lighting.",
     detail:
-      "Villa R69 Emirates Hill is designed with a formal reception mood: bookmatched marble, walnut wall panels, teal lounge accents, stone flooring, and warm layered light for an elevated villa experience.",
+      "Villa R69 Emirates Hills is designed with a formal reception mood: bookmatched marble, walnut wall panels, teal lounge accents, stone flooring, and warm layered light for an elevated villa experience.",
   },
   {
     slug: "villa-sf22",
-    title: "Villa sf22",
+    title: "Villa SF22",
     category: "Private Villa",
     location: "Dubai",
     year: "2026",
+    status: "Concept Visualisation",
     image: villaSf22Img,
     palette: "Light oak, ivory, brass, muted teal",
     scope: ["Family lounge", "Bedroom detail", "Storage design"],
     summary:
       "A soft modern villa interior with curved timber, creamy stone, warm lighting, and calm family spaces.",
     detail:
-      "Villa sf22 focuses on a lighter residential palette, with curved timber features, concealed lighting, bespoke storage, and warm neutral finishes suitable for a refined family home.",
+      "Villa SF22 focuses on a lighter residential palette, with curved timber features, concealed lighting, bespoke storage, and warm neutral finishes suitable for a refined family home.",
   },
   {
     slug: "villa-sf74-and-sf75",
-    title: "Villa sf74 and sf75",
+    title: "Villa SF74 and SF75",
     category: "Twin Villas",
     location: "Dubai",
     year: "2026",
+    status: "Concept Visualisation",
     image: villaSf74AndSf75Img,
     palette: "Light oak, white marble, brass, deep teal",
     scope: ["Kitchen design", "Dining area", "Twin villa fit-out"],
     summary:
       "A cohesive twin-villa interior with open kitchen, dining, light oak cabinetry, marble, and teal accents.",
     detail:
-      "Villa sf74 and sf75 brings a consistent design language across paired villas, using bright open-plan planning, marble islands, brass fixtures, fluted wall panels, and warm concealed lighting.",
+      "Villa SF74 and SF75 brings a consistent design language across paired villas, using bright open-plan planning, marble islands, brass fixtures, fluted wall panels, and warm concealed lighting.",
   },
 ];
 

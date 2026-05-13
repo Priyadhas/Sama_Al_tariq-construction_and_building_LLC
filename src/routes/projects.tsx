@@ -65,7 +65,7 @@ function ProjectsPage() {
             <div className="hidden items-center gap-3 text-[10px] font-bold tracking-[0.28em] text-background/55 uppercase md:flex">
               <span>Project archive</span>
               <span className="h-px w-12 bg-background/30" />
-              <span>4K visual studies</span>
+              <span>Concept visualisations</span>
             </div>
           </div>
 
@@ -108,11 +108,11 @@ function ProjectsPage() {
                     <div className="flex items-center gap-2 text-background/45">
                       <Sparkles className="h-4 w-4" />
                       <span className="text-[10px] tracking-[0.16em] uppercase sm:tracking-[0.2em]">
-                        Finish
+                        Status
                       </span>
                     </div>
                     <div className="mt-3 font-serif text-xl sm:text-2xl">
-                      {activeProject.year}
+                      {activeProject.status}
                     </div>
                   </div>
                 </div>
@@ -198,8 +198,11 @@ function ProjectsPage() {
                       isActive ? "bg-black/8" : "bg-black/42"
                     }`}
                   />
-                  <span className="absolute inset-x-3 bottom-3 truncate text-left text-[10px] font-bold tracking-[0.16em] text-background uppercase">
+                  <span className="absolute inset-x-3 bottom-7 truncate text-left text-[10px] font-bold tracking-[0.16em] text-background uppercase">
                     {String(index + 1).padStart(2, "0")} {project.title}
+                  </span>
+                  <span className="absolute inset-x-3 bottom-3 truncate text-left text-[9px] font-bold tracking-[0.14em] text-background/70 uppercase">
+                    {project.status}
                   </span>
                 </button>
               );
@@ -252,6 +255,9 @@ function ProjectsPage() {
                               <div>
                                 <div className="text-[10px] tracking-[0.16em] text-background/65 uppercase sm:tracking-[0.24em]">
                                   {project.category} / {project.location}
+                                </div>
+                                <div className="mt-1 text-[9px] font-bold tracking-[0.18em] text-background/65 uppercase">
+                                  {project.status}
                                 </div>
                                 <h3 className="mt-2 font-serif text-2xl sm:text-3xl">
                                   {project.title}

@@ -9,12 +9,55 @@ import { Reveal } from "../components/site/Reveal";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About - Sama Al Tariq" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { charSet: "utf-8" },
+      {
+        title:
+          "About Us - Sama Al Tariq | Luxury Construction & Fit-Out Experts",
+      },
       {
         name: "description",
         content:
-          "About Sama Al Tariq Tech Services L.L.C., a UAE-based facility management, renovation, fit-out and civil services company.",
+          "Learn about Sama Al Tariq Building Contracting L.L.C., a UAE-based facility management, renovation, fit-out and civil services company founded in Dubai in 2012.",
       },
+      {
+        name: "keywords",
+        content:
+          "about Sama Al Tariq, construction company Dubai, fit-out experts, civil services UAE, facility management, renovation specialists",
+      },
+      { name: "author", content: "Sama Al Tariq Building Contracting L.L.C." },
+      { name: "robots", content: "index, follow" },
+      // Open Graph
+      { property: "og:type", content: "website" },
+      {
+        property: "og:title",
+        content:
+          "About Us - Sama Al Tariq | Luxury Construction & Fit-Out Experts",
+      },
+      {
+        property: "og:description",
+        content:
+          "Learn about Sama Al Tariq Building Contracting L.L.C., a UAE-based facility management, renovation, fit-out and civil services company.",
+      },
+      { property: "og:url", content: "https://samaaltariq.com/about" },
+      { property: "og:image", content: "https://samaaltariq.com/logo.jpg" },
+      { property: "og:site_name", content: "Sama Al Tariq" },
+      { property: "og:locale", content: "en_US" },
+      // Twitter Card
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content:
+          "About Us - Sama Al Tariq | Luxury Construction & Fit-Out Experts",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Learn about Sama Al Tariq Building Contracting L.L.C., a UAE-based facility management, renovation, fit-out and civil services company.",
+      },
+      { name: "twitter:image", content: "https://samaaltariq.com/logo.jpg" },
+      // Canonical URL
+      { rel: "canonical", href: "https://samaaltariq.com/about" },
     ],
   }),
   component: AboutPage,
@@ -24,7 +67,7 @@ const civilServices = [
   "Block work",
   "Plasterwork",
   "Screeding",
-  "Column and slab restoration",
+  "Column and slab repair",
   "Waterproofing",
   "Concrete pouring",
   "Masonry work",
@@ -59,10 +102,10 @@ function AboutPage() {
 
           <Reveal delay={0.16}>
             <p className="mt-12 max-w-4xl text-xl leading-relaxed text-[#43515b] md:text-3xl">
-              Sama Al Tariq Tech Services L.L.C. is a UAE-based company
-              delivering facility management, renovation, fit-out innovation and
+              Sama Al Tariq Building Contracting L.L.C. is a Dubai-founded
+              company delivering facility management, renovation, fit-out and
               civil works for villas, apartments, offices, hotels, clubs and
-              restaurants.
+              restaurants since 2012.
             </p>
           </Reveal>
         </div>
@@ -86,20 +129,39 @@ function AboutPage() {
 
           <div className="lg:col-span-6 lg:col-start-7">
             <Reveal>
-              <div className="flex items-center gap-3 text-[color:var(--color-teal)]">
+              <div className="grid gap-6 border-b border-background/12 pb-12 sm:grid-cols-3">
+                {[
+                  ["2012", "Founded in Dubai"],
+                  ["14+", "Years in operation"],
+                  ["10", "Core service lines"],
+                ].map(([value, label]) => (
+                  <div key={label}>
+                    <div className="font-serif text-4xl text-background">
+                      {value}
+                    </div>
+                    <div className="mt-3 text-[10px] font-bold tracking-[0.22em] text-background/45 uppercase">
+                      {label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.08}>
+              <div className="mt-12 flex items-center gap-3 text-[color:var(--color-teal)]">
                 <span className="h-px w-10 bg-[color:var(--color-teal)]" />
                 <span className="text-[11px] font-bold tracking-[0.24em] uppercase sm:tracking-[0.32em]">
                   Mission
                 </span>
               </div>
             </Reveal>
-            <Reveal delay={0.1}>
+            <Reveal delay={0.14}>
               <h2 className="mt-8 font-serif text-4xl leading-[1.08] md:text-6xl">
-                To deliver finished interiors at the standard our clients
-                privately hope for but rarely receive.
+                To deliver practical, finished spaces with clear scope control
+                and accountable site execution.
               </h2>
             </Reveal>
-            <Reveal delay={0.18}>
+            <Reveal delay={0.2}>
               <p className="mt-8 max-w-2xl text-base leading-relaxed text-background/64">
                 On time, on brief, on budget, with a paper trail that proves it.
                 Every project is planned, designed and executed around the

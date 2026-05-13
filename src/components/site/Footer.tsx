@@ -9,16 +9,14 @@ export function Footer() {
               Building Contracting L.L.C.
             </div>
             <p className="mt-8 max-w-sm text-sm leading-relaxed text-foreground/60">
-              A Dubai fit-out and renovation house. Built to specification.
-              Finished without excuse.
+              A Dubai-based contracting and technical services company for
+              fit-out, renovation, civil works and planned maintenance.
             </p>
           </div>
           <div className="md:col-span-3">
-            <div className="eyebrow text-foreground/50">Studio</div>
+            <div className="eyebrow text-foreground/50">Office Address</div>
             <address className="mt-6 not-italic text-sm leading-relaxed text-foreground/80">
-              Sheikh Zayed Road
-              <br />
-              Dubai, United Arab Emirates
+              Sapphire Tower, Dubai, UAE
             </address>
           </div>
           <div className="md:col-span-2">
@@ -48,33 +46,29 @@ export function Footer() {
                   info@samaaltariq.org
                 </a>
               </li>
-              <li className="pt-4 text-[11px] font-semibold tracking-[0.18em] text-foreground/50 uppercase sm:tracking-[0.24em]">
-                Office Address
-              </li>
-              <li>Sapphire Tower, Dubai, UAE</li>
             </ul>
           </div>
           <div className="md:col-span-2">
             <div className="eyebrow text-foreground/50">Index</div>
             <ul className="mt-6 space-y-2 text-sm text-foreground/80">
               <li>
-                <a href="#philosophy" className="hover:text-foreground">
-                  Philosophy
+                <a href="/about" className="hover:text-foreground">
+                  About
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-foreground">
+                <a href="/services" className="hover:text-foreground">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#work" className="hover:text-foreground">
-                  Work
+                <a href="/projects" className="hover:text-foreground">
+                  Projects
                 </a>
               </li>
               <li>
-                <a href="#process" className="hover:text-foreground">
-                  Process
+                <a href="/contact" className="hover:text-foreground">
+                  Contact
                 </a>
               </li>
             </ul>
@@ -83,10 +77,10 @@ export function Footer() {
         <div className="hairline mt-20" />
         <div className="mt-8 flex flex-col items-start justify-between gap-3 text-xs tracking-[0.12em] text-foreground/50 uppercase sm:tracking-[0.18em] md:flex-row md:items-center">
           <div>
-            © {new Date().getFullYear()} Sama Al Tariq Building Contracting
+            (c) {new Date().getFullYear()} Sama Al Tariq Building Contracting
             L.L.C.
           </div>
-          <div>samaaltariq.ae · Dubai</div>
+          <div>samaaltariq.org / Dubai</div>
         </div>
       </div>
     </footer>

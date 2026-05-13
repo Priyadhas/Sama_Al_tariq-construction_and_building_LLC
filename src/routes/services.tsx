@@ -17,52 +17,52 @@ import { Reveal } from "../components/site/Reveal";
 const services = [
   {
     title: "Interior Fit-Out",
-    body: "Bespoke interiors coordinated across joinery, stone, lighting, glass, metal and final finishes.",
+    body: "Turnkey villa, office and retail fit-out coordinated across joinery, stone, lighting, glass, metal and final finishes.",
     image: serviceInteriorFitOut,
   },
   {
     title: "Architectural Finishes",
-    body: "Feature surfaces, detail-led materials and decorative finishes installed to premium visual standards.",
+    body: "Feature surfaces, cladding, paint systems and decorative finishes installed with controlled setting-out and edge details.",
     image: serviceArchitecturalFinishes,
   },
   {
     title: "Maintenance & Asset Care",
-    body: "Planned maintenance, responsive repair and lifecycle care that protects finished assets after handover.",
+    body: "Planned maintenance, responsive repair and lifecycle care for offices, villas, common areas and finished assets after handover.",
     image: serviceMaintenanceAssetCare,
   },
   {
     title: "Ceiling & Partition Systems",
-    body: "Precision gypsum, acoustic, metal-frame and specialist ceiling systems aligned to architectural and MEP requirements.",
+    body: "Gypsum, acoustic, metal-frame and specialist ceiling systems aligned to architectural drawings and MEP requirements.",
     image: serviceCeilingPartitionSystems,
   },
   {
     title: "Stone & Tile Installation",
-    body: "Marble, porcelain, ceramic and natural stone works with careful setting-out and edge control.",
+    body: "Marble, porcelain, ceramic and natural stone works with careful setting-out, substrate checks and edge control.",
     image: serviceStoneTileInstallation,
   },
   {
     title: "Surface Preparation & Plaster",
-    body: "Substrate preparation, rendering, plastering and leveling systems that create the base for flawless final finishes.",
+    body: "Substrate preparation, rendering, plastering and leveling systems that create the base for reliable final finishes.",
     image: serviceSurfacePreparationPlaster,
   },
   {
     title: "Waterproofing Systems",
-    body: "Integrated waterproofing for roofs, wet areas, terraces and below-grade conditions.",
+    body: "Integrated waterproofing for roofs, wet areas, terraces and below-grade conditions before finishes are installed.",
     image: serviceWaterproofingSystems,
   },
   {
     title: "Civil & Structural Works",
-    body: "Foundational civil works, structural modifications and site-built systems executed with discipline.",
+    body: "Block work, screeding, masonry, concrete repair and structural modifications executed with documented site control.",
     image: serviceCivilStructuralWorks,
   },
   {
     title: "Landscape Environments",
-    body: "External environments shaped through hardscape, softscape, lighting and coordinated site execution.",
+    body: "External environments shaped through hardscape, softscape, lighting, water features and coordinated site execution.",
     image: serviceLandscapeEnvironments,
   },
   {
     title: "Pool & Leisure Environments",
-    body: "Pools, decks and leisure zones delivered with coordination between structure, waterproofing and finishes.",
+    body: "Pools, decks and leisure zones delivered with coordination between structure, waterproofing, MEP and finishes.",
     image: servicePoolLeisureEnvironments,
   },
 ];
@@ -94,7 +94,7 @@ function ServicesPage() {
               <span className="eyebrow">Services</span>
             </div>
             <h1 className="mt-8 max-w-5xl font-serif text-[clamp(3rem,13vw,4.5rem)] leading-[1.02] md:text-7xl">
-              Material, method, and finish held in quiet alignment.
+              Contracting, fit-out and maintenance delivered under one scope.
             </h1>
           </Reveal>
 
@@ -102,13 +102,16 @@ function ServicesPage() {
             {services.map((service, index) => (
               <Reveal key={service.title} delay={(index % 3) * 0.06}>
                 <article className="group">
-                  <div className="aspect-[4/3] overflow-hidden bg-foreground">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-foreground">
                     <img
                       src={service.image}
                       alt={service.title}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-[1400ms] group-hover:scale-[1.04]"
                     />
+                    <div className="absolute right-3 bottom-3 bg-black/62 px-3 py-2 text-[9px] font-bold tracking-[0.16em] text-background uppercase">
+                      Concept Visualisation
+                    </div>
                   </div>
                   <h2 className="mt-7 font-serif text-3xl">{service.title}</h2>
                   <p className="mt-4 text-sm leading-relaxed text-foreground/65">

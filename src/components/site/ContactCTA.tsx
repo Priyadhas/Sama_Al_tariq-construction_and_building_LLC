@@ -2,13 +2,13 @@ import { Reveal } from "./Reveal";
 
 export function ContactCTA() {
   return (
-    <section className="relative flex min-h-[80svh] items-center border-t border-background/10 bg-black py-24 text-background md:py-36">
+    <section className="relative flex items-center border-t border-background/10 bg-black py-24 text-background md:py-32">
       <div className="container-x text-center">
         <Reveal>
           <div className="mx-auto flex items-center justify-center gap-3 text-background/42 sm:gap-4">
             <span className="h-px w-8 bg-background/28 sm:w-12" />
             <span className="text-[10px] font-bold tracking-[0.24em] uppercase sm:tracking-[0.32em]">
-              06 - Begin
+              Enquiries
             </span>
             <span className="h-px w-8 bg-background/28 sm:w-12" />
           </div>
@@ -16,14 +16,14 @@ export function ContactCTA() {
 
         <Reveal delay={0.08}>
           <h2 className="mx-auto mt-12 max-w-4xl text-center font-serif text-5xl font-semibold leading-[1.02] tracking-normal text-background md:text-7xl">
-            A conversation, before <span className="italic">a proposal.</span>
+            Send us your enquiry.
           </h2>
         </Reveal>
 
         <Reveal delay={0.16}>
           <p className="mx-auto mt-10 max-w-md text-center text-sm leading-relaxed text-background/58 md:text-base">
-            We accept a small number of new commissions each year. If your
-            project warrants a considered hand, we would like to meet.
+            Share the scope, location and timeline. We respond within 2 working
+            days.
           </p>
         </Reveal>
 
@@ -35,7 +35,7 @@ export function ContactCTA() {
             >
               contact@samaaltariq.org
               <span className="inline-block transition-transform group-hover:translate-x-1">
-                →
+                -&gt;
               </span>
             </a>
             <a

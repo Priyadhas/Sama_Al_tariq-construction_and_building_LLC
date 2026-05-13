@@ -34,20 +34,54 @@ import { featuredProjects } from "../lib/projects";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { charSet: "utf-8" },
       { title: "Sama Al Tariq — Luxury Construction & Fit-Out, Dubai" },
       {
         name: "description",
         content:
-          "A Dubai-based construction and fit-out practice. Built to specification. Finished without excuse.",
+          "A Dubai-based construction and fit-out practice specializing in luxury villas, offices, retail spaces, and commercial fit-out. Built to specification. Finished without excuse.",
       },
       {
+        name: "keywords",
+        content:
+          "luxury construction, fit-out, Dubai, villa construction, office fit-out, retail spaces, commercial construction, interior design",
+      },
+      { name: "author", content: "Sama Al Tariq Building Contracting L.L.C." },
+      { name: "robots", content: "index, follow" },
+      { name: "language", content: "English" },
+      { name: "revisit-after", content: "7 days" },
+      // Open Graph
+      { property: "og:type", content: "website" },
+      {
         property: "og:title",
-        content: "Sama Al Tariq — Luxury Construction & Fit-Out",
+        content: "Sama Al Tariq — Luxury Construction & Fit-Out, Dubai",
       },
       {
         property: "og:description",
-        content: "Built to specification. Finished without excuse.",
+        content:
+          "A Dubai-based construction and fit-out practice. Built to specification. Finished without excuse.",
       },
+      { property: "og:url", content: "https://samaaltariq.com" },
+      { property: "og:image", content: "https://samaaltariq.com/logo.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:site_name", content: "Sama Al Tariq" },
+      { property: "og:locale", content: "en_US" },
+      // Twitter Card
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content: "Sama Al Tariq — Luxury Construction & Fit-Out, Dubai",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "A Dubai-based construction and fit-out practice. Built to specification. Finished without excuse.",
+      },
+      { name: "twitter:image", content: "https://samaaltariq.com/logo.jpg" },
+      // Canonical URL
+      { rel: "canonical", href: "https://samaaltariq.com" },
     ],
   }),
   component: Index,
@@ -114,7 +148,7 @@ function Hero() {
         <div className="flex items-center gap-4 text-background/70">
           <span className="h-px w-8 bg-background/50 sm:w-12" />
           <span className="text-[10px] tracking-[0.24em] uppercase sm:text-[11px] sm:tracking-[0.32em]">
-            Est. Dubai / MMXII
+            Founded Dubai / 2012
           </span>
         </div>
 
@@ -135,9 +169,9 @@ function Hero() {
             transition={{ duration: 1, delay: 0.9 }}
             className="mt-10 max-w-md text-base leading-relaxed text-background/70"
           >
-            A Dubai fit-out and renovation house. Boardrooms, lobbies, executive
-            suites and private residences delivered for clients who judge the
-            work on what cannot be seen.
+            A Dubai contracting and technical services team delivering fit-out,
+            renovation, civil works and planned maintenance for villas, offices,
+            retail and commercial environments.
           </motion.p>
         </div>
 
@@ -272,7 +306,7 @@ function Marquee() {
         <span className="text-foreground/20">/</span>
         <span>Workplace</span>
         <span className="text-foreground/20">/</span>
-        <span>Heritage</span>
+        <span>Maintenance</span>
       </div>
     </div>
   );
@@ -320,10 +354,10 @@ function Philosophy() {
           <Reveal delay={0.2}>
             <div className="mt-12 grid gap-10 md:grid-cols-2">
               <p className="text-base leading-relaxed text-foreground/75">
-                Sama Al Tariq is a Dubai fit-out and renovation house. We
-                rebuild commercial environments — boardrooms, lobbies, executive
-                suites — for clients whose work is judged on what cannot be seen
-                as much as what can.
+                Sama Al Tariq is a Dubai-based contracting and technical
+                services company. We coordinate civil works, interior fit-out,
+                waterproofing, finishes and maintenance under one accountable
+                delivery team.
               </p>
               <p className="text-base leading-relaxed text-foreground/75">
                 Tolerances measured. Edges aligned. Site noise stays on site. We
@@ -334,7 +368,7 @@ function Philosophy() {
           <Reveal delay={0.3}>
             <div className="mt-16 grid grid-cols-3 gap-8 border-t border-foreground/10 pt-10">
               {[
-                ["12+", "Years in Dubai"],
+                ["14+", "Years in Dubai"],
                 ["140", "Projects delivered"],
                 ["32", "Specialist trades"],
               ].map(([n, l]) => (

@@ -6,7 +6,9 @@ import logo from "../../assets/logo-transparent.png";
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isHomePage, setIsHomePage] = useState(true);
   const previousOverflow = useRef("");
+  const isSolid = scrolled || menuOpen || !isHomePage;
   const navItems = [
     ["Home", "/"],
     ["About", "/about"],
@@ -16,6 +18,8 @@ export function Nav() {
   ];
 
   useEffect(() => {
+    setIsHomePage(window.location.pathname === "/");
+
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -38,7 +42,7 @@ export function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-500 ${
-        scrolled || menuOpen
+        isSolid
           ? "border-b border-foreground/10 bg-background/95 shadow-[0_18px_50px_rgba(0,0,0,0.08)] backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       }`}
@@ -47,14 +51,14 @@ export function Nav() {
         <Link to="/" className="group flex items-center">
           <span
             className={`flex items-center justify-center transition-all duration-500 ${
-              scrolled || menuOpen ? "p-0" : "p-0 drop-shadow-[0_14px_34px_rgba(0,0,0,0.28)]"
+              isSolid ? "p-0" : "p-0 drop-shadow-[0_14px_34px_rgba(0,0,0,0.28)]"
             }`}
           >
             <img
               src={logo}
               alt="Sama Al Tariq"
               className={`w-auto transition-all duration-500 ${
-                scrolled || menuOpen ? "h-12 md:h-16" : "h-14 md:h-20"
+                isSolid ? "h-12 md:h-16" : "h-14 md:h-20"
               }`}
             />
           </span>
@@ -65,7 +69,7 @@ export function Nav() {
               key={label}
               href={href}
               className={`group relative py-3 text-[11px] font-extrabold tracking-[0.23em] uppercase transition-colors duration-300 xl:text-[12px] xl:tracking-[0.25em] ${
-                scrolled
+                isSolid
                   ? "text-foreground/80 hover:text-foreground"
                   : "text-background/90 drop-shadow-[0_2px_14px_rgba(0,0,0,0.45)] hover:text-background"
               }`}
@@ -77,19 +81,9 @@ export function Nav() {
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="/login"
-            className={`px-4 py-3 text-[11px] font-extrabold tracking-[0.23em] uppercase transition-all duration-300 xl:px-5 xl:text-[12px] xl:tracking-[0.25em] ${
-              scrolled
-                ? "border border-foreground/20 text-foreground/80 hover:border-[color:var(--color-teal)] hover:text-[color:var(--color-teal)]"
-                : "border border-background/60 bg-black/10 text-background shadow-[0_16px_40px_rgba(0,0,0,0.16)] backdrop-blur-[2px] hover:border-[color:var(--color-teal)] hover:bg-background/12"
-            }`}
-          >
-            Login
-          </a>
-          <a
             href="/contact"
             className={`px-5 py-3 text-[11px] font-extrabold tracking-[0.23em] uppercase transition-all duration-300 xl:px-6 xl:text-[12px] xl:tracking-[0.25em] ${
-              scrolled
+              isSolid
                 ? "bg-foreground text-background hover:bg-[color:var(--color-teal)]"
                 : "border border-background/70 bg-black/10 text-background shadow-[0_16px_40px_rgba(0,0,0,0.22)] backdrop-blur-[2px] hover:border-[color:var(--color-teal)] hover:bg-[color:var(--color-teal)]"
             }`}
@@ -101,7 +95,7 @@ export function Nav() {
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
           className={`col-start-3 inline-flex h-11 w-11 items-center justify-center justify-self-end border transition-colors duration-300 lg:hidden ${
-            scrolled || menuOpen
+            isSolid
               ? "border-foreground/20 text-foreground"
               : "border-background/60 bg-black/10 text-background shadow-[0_16px_40px_rgba(0,0,0,0.16)] backdrop-blur-[2px]"
           }`}
@@ -129,18 +123,11 @@ export function Nav() {
               {label}
             </a>
           ))}
-          <div className="mt-6 grid grid-cols-2 gap-3">
-            <a
-              href="/login"
-              onClick={() => setMenuOpen(false)}
-              className="border border-foreground/20 px-4 py-4 text-center text-[11px] font-extrabold tracking-[0.22em] text-foreground/80 uppercase"
-            >
-              Login
-            </a>
+          <div className="mt-6">
             <a
               href="/contact"
               onClick={() => setMenuOpen(false)}
-              className="bg-foreground px-4 py-4 text-center text-[11px] font-extrabold tracking-[0.22em] text-background uppercase"
+              className="block bg-foreground px-4 py-4 text-center text-[11px] font-extrabold tracking-[0.22em] text-background uppercase"
             >
               Enquire
             </a>
